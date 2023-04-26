@@ -18,3 +18,21 @@ function argumentos(){
 }
 
 argumentos(1,2,3,4,5,6,7,8,9,10); 
+
+//função imediatas
+(function(){
+    console.log(123)
+})();
+
+(function(){
+    const sobrenome = "Nagamine";
+    function criaNome(nome){
+        return nome + ' ' + sobrenome;
+    }
+    function falaNome(){
+        console.log(criaNome("Fabio"));
+    }
+
+    falaNome();
+
+})();
