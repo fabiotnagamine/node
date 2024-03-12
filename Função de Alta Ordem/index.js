@@ -44,6 +44,9 @@ let double = (x) => {
 let numbers = [43, 45, 89, 12, 56];
 console.log("Numbers doubled: ", applyOperation(numbers, double));
 
+
+
+/************************************************************************************************ */
 const createMultiplier = (factor) => {
     return (x) => {
         return x * factor;
