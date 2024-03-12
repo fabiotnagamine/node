@@ -45,17 +45,17 @@ function inherit(p) {
 
 
 let empty = {}; // Um objeto sem propriedades
-let point = { x:0, y:0 }; // Duas propriedades
-let point2 = { x:point.x, y:point.y+1 }; // Valores mais complexos
+let point = { x: 0, y: 0 }; // Duas propriedades
+let point2 = { x: point.x, y: point.y + 1 }; // Valores mais complexos
 let book = {
- "main title": "JavaScript", // Os nomes de propriedade incluem espaços,
- 'sub-title': "The Definitive Guide", // e hifens; portanto, usam strings literais
- "for": "all audiences", // for é uma palavra reservada; portanto, usa 
-// aspas
- author: { // O valor dessa propriedade é
- firstname: "David", // ele próprio um objeto. Note que
- surname: "Flanagan" // esses nomes de propriedade não têm aspas.
- }
+    "main title": "JavaScript", // Os nomes de propriedade incluem espaços,
+    'sub-title': "The Definitive Guide", // e hifens; portanto, usam strings literais
+    "for": "all audiences", // for é uma palavra reservada; portanto, usa 
+    // aspas
+    author: { // O valor dessa propriedade é
+        firstname: "David", // ele próprio um objeto. Note que
+        surname: "Flanagan" // esses nomes de propriedade não têm aspas.
+    }
 };
 
 
@@ -68,3 +68,28 @@ book['Main title'] = 'New Title';
 
 console.log(book);
 
+const produto = { nome: 'Coca', preco: 5.50 };
+const carrinho = {
+    ...produto,
+    quantidade: '2 Litros'
+};
+
+carrinho.nome = 'Coca-Cola';
+carrinho.preco = 5.99;
+
+console.log(produto);
+console.log(carrinho);
+
+// Object.assign(): 
+const produtoMercado = Object.assign({}, produto, {
+    quantidade: '2 Litros',
+    embalagem: 'Garrafa Pet'
+});
+
+console.log(produtoMercado);
+
+// Object.keys():
+console.log("Keys: " + Object.keys(produtoMercado));
+
+console.log('************************************************');
+console.log(Object.getOwnPropertyDescriptor(produtoMercado, 'nome'));
