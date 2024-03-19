@@ -32,13 +32,9 @@ passos.forEach((passo, index) => {
 
 
 const numeros = [5, 10, 15, 20, 35, 40, 568,56661, 56224899];
-const numerosPares = numeros.filter((valor) => {
-    return  valor % 2 === 0;
-}).map((valor) =>{
-    return valor * 2;
-}).reduce((acumulador, valor) => {
-    return acumulador + valor;
-});
+const numerosPares = numeros.filter((valor) => valor % 2 === 0)
+.map((valor) => valor * 2)
+.reduce((acumulador, valor) => acumulador + valor);
 
 console.log('Numeros Pares:', numerosPares);
 
