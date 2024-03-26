@@ -33,10 +33,19 @@ function ContaCorrrente(agencia, conta,  saldo, limite){
 }
 
 ContaCorrrente.prototype = Object.create(Conta.prototype);
-ContaCorrrente.prototype.constructor = ContaCorrente;
+ContaCorrrente.prototype.constructor = ContaCorrrente;
 
 ContaCorrrente.prototype.saque = function(valor){
-    if(this.limite > valor && valor > this.saldo){
-        this.saldo -= valor;
+    if(valor > (this.saldo + this.limite)){
+        console.log("Saldo insuficiente");
     }
-}
+
+    this.saldo -= valor;
+    this.verSaldo();
+};
+
+
+const contaCorrente1 = new ContaCorrrente(123, 123456, 1200, 1200);
+
+contaCorrente1.saque(3400);
+contaCorrente1.depositar(10000);
