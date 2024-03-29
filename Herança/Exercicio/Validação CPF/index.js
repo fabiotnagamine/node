@@ -16,7 +16,7 @@ ValidaCPF.prototype.criaDigito = function (cpfParcial) {
         return ac;
     }, 0);
     
-    const digitos = 11 - (total % 11);
+    const digitos = 11 - (total % 11);  
     return digitos > 9 ? '0' : String(digitos);
 }
 
