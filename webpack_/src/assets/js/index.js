@@ -1,0 +1,1 @@
+const publico = 12;
