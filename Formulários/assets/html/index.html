@@ -3,35 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../css/style.css" rel="stylesheet"/>
     <title>Document</title>
 </head>
 <body>
-    <section class="container">
-        <li>Nenhum campo pode estar vazio</li>
-        <li>Usuário so poderá conter letras e/ou números</li>
-        <li>Usuário deve ter de 3 à 12 caracteres</li>
-        <li>Senha prescisa ter entre 6 e 12 caracteres</li>
+  <div id="json-output"></div>
 
-        <form action="/" method="POST" class="formulario">
-            <label">Nome</label>
-            <input type="text"class="nome">
-            <label>Sobrenome</label>
-            <input type="text" class="sobrenome">
-            <label>CPF</label>
-            <input type="text" class="cpf">
-            <label>Usuário</label>
-            <input type="text" class="usuario">
-            <label>Senha</label>
-            <input type="text" class="senha">
-            <label>Repetir Senha</label>
-            <input type="text" class="repetir_senha">
-            <button  type="submit">Enviar Formulário</button>
-
+    < <section class="container">
+        <h1>Formulário de cadastro</h1>
+        <ul>
+          <li>Nenhum campo pode estar vazio</li>
+          <li>Usuário só poderá conter letras e/ou números</li>
+          <li>Usuário deverá ter entre 3 e 12 caracteres</li>
+          <li>Senha precisa ter entre 6 e 12 caracteres</li>
+        </ul>
+        
+        <form action="/" method="POST" class='formulario'>
+          <label>Nome</label>
+          <input type="text" class="nome validar">
+          <label>Sobrenome</label>
+          <input type="text" class="sobrenome validar">
+          <label>CPF</label>
+          <input type="text" class="cpf validar">
+          <label>Usuário</label>
+          <input type="text" class="usuario validar">
+          <label>Senha</label>
+          <input type="password" class="senha validar">
+          <label>Repetir Senha</label>
+          <input type="password" class="repetir-senha validar">
+          <button type="submit">Enviar</button>
         </form>
-
-
-    </section>
-
-    <script src="../js/index.js"></script>
+      </section>
+   
+  <script src="../js/Validação CPF Exercicio Fixação/ValidaCPF.js"></script>
+  <script type="module" src="../js/Validação CPF Exercicio Fixação/ValidaFormulario.js"></script>
 </body>
 </html>

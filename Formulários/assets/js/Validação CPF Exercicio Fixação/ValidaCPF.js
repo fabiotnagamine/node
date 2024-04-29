@@ -60,5 +60,7 @@ class ValidaCPF{
 
 
 }
+
+
 const  cpfValido = new ValidaCPF('238-730-068-80');
 console.log(cpfValido.valida())
