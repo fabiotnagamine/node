@@ -32,6 +32,11 @@ function ContaCorrrente(agencia, conta,  saldo, limite){
     this.limite = limite;
 }
 
+ContaCorrrente.prototype.verSaldo = function() {
+    console.log(`Ag.: ${this.agencia}` + "\n" + `Conta: ${this.conta}` + "\n" + `Valor: ${this.saldo}`);
+    return this.saldo;
+}
+
 ContaCorrrente.prototype = Object.create(Conta.prototype);
 ContaCorrrente.prototype.constructor = ContaCorrrente;
 
@@ -46,6 +51,8 @@ ContaCorrrente.prototype.saque = function(valor){
 
 
 const contaCorrente1 = new ContaCorrrente(123, 123456, 1200, 1200);
+const contaCorrente2 = new ContaCorrrente(666, 12345, 520.00, 6000.00);
 
-contaCorrente1.saque(3400);
-contaCorrente1.depositar(10000);
+contaCorrente2.verSaldo();
+// contaCorrente1.saque(3400);
+// contaCorrente1.depositar(10000);

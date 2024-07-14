@@ -1,1 +1,15 @@
-{"version":3,"file":"bundle.js","mappings":";;;;;AAAA,IAAMA,OAAO,GAAG,EAAE,C","sources":["webpack://webpack_/./src/assets/js/index.js"],"sourcesContent":["const publico = 12;"],"names":["publico"],"sourceRoot":""}
+{
+  "version": 3,
+  "file": "bundle.js",
+  "mappings": ";;;;;AAAA,IAAMA,OAAO,GAAG,EAAE,C",
+  "sources": [
+    "webpack://webpack_/./src/assets/js/index.js"
+  ],
+  "sourcesContent": [
+    "const publico = 12;"
+  ],
+  "names": [
+    "publico"
+  ],
+  "sourceRoot": ""
+}

@@ -7,12 +7,12 @@ Além disso, as funções de alta ordem podem ser usadas em conjunto com funçõ
 Ultima Função
 */
 
-function not(f) {
-    return function () {
-        let result = f.apply(this, arguments);
-        return !result;
+function not(func) {
+    return function () { 
+        let result = func.apply(this, arguments);
+        return !result; 
     };
-}
+} 
 
 let even = (x) => {
     return x % 2 === 0;
@@ -21,7 +21,7 @@ let even = (x) => {
 let data = [1, 5, 3, 6, 9, 55, 20, 45, 36, 47, 556, 220];
 
 let odd = even;
-console.log([1, 5, 3, 6, 9, 55, 20, 45, 36, 47, 556, 220].every(odd));
+console.log([1, 5, 3, 56, 9, 55, 20, 45, 36, 47, 556, 220].every(odd));
 
 function mapper(f) {
     return function (a) {
